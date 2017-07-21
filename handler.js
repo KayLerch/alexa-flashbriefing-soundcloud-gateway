@@ -1,9 +1,5 @@
 'use strict';
-const aws = require('aws-sdk');
 const https = require('https');
-const xml2js = require('xml2js');
-const parser = new xml2js.Parser();
-
 const scuid = '31xxxxx62';
 
 module.exports.feed = (event, context, callback) => {
