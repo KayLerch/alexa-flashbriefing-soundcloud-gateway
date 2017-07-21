@@ -1,0 +1,18 @@
+{
+  "name": "alexa-flashbriefing-soundcloud-gateway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {
+    "xml2js": "^0.4.17",
+    "sax": ">=0.6.0",
+    "xmlbuilder": "^9.0.1",
+    "https": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kay Lerch",
+  "license": "ISC"
+}
