@@ -16,16 +16,20 @@ module.exports.feed = (event, context, callback) => {
             // split into array of items
             var chunks = payload.replace(/url=\"http\:/gi,'url=\"https:').split('</item>');
             // where first item is contained in the first chunk and will always be part of the return
-            // while splitting by the item-end-tag it got lost so we have to append it again
-            var body = chunks[0] + '</item>';
-            // go through rest of the items and append until desired num of items or number of items returned is reached
-            // ignore the last chunk as it contains the tail-payload we will append later on
-            for(var i = 1; i < Math.min(chunks.length - 1, items_to_return); i++){
+            var body = chunks[0];
+            if (chunks.length > 1) {
                 // while splitting by the item-end-tag it got lost so we have to append it again
-                body += (chunks[i] + '</item>');
+                body += '</item>';
+                // go through rest of the items and append until desired num of items or number of items returned is reached
+                // ignore the last chunk as it contains the tail-payload we will append later on
+                for(var i = 1; i < Math.min(chunks.length - 1, items_to_return); i++){
+                    // while splitting by the item-end-tag it got lost so we have to append it again
+                    body += (chunks[i] + '</item>');
+                }
+                // finally, append the tail payload
+                body += chunks.slice(-1)[0];
             }
-            // finally, append the tail payload
-            body += chunks.slice(-1)[0];
+            
             callback(null, {
                 statusCode: response.statusCode,
                 headers: response.headers,
