@@ -20,9 +20,9 @@ your Soundcloud-UserId is _555123456_.
 
 After your deployed your serverless stack in step 2) you should use the returned url and provide your Soundcloud-UserId as a GET parameter:
 
-_https://xxx9t1mxxx.execute-api.eu-west-1.amazonaws.com/prod/feed?uid=555123456
+_https://xxx9t1mxxx.execute-api.eu-west-1.amazonaws.com/prod/feed?uid=555123456_
 
 Optionally, you can limit the number of returned feed items (by default the limit is 1)
 
-_https://xxx9t1mxxx.execute-api.eu-west-1.amazonaws.com/prod/feed?uid=555123456&limit=3
+_https://xxx9t1mxxx.execute-api.eu-west-1.amazonaws.com/prod/feed?uid=555123456&limit=3_
 
