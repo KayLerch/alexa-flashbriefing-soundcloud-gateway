@@ -5,8 +5,8 @@ provider:
   stage: prod
   runtime: nodejs6.10
   region: eu-west-1
-  memorySize: 1536 
-  timeout: 20 
+  memorySize: 512 
+  timeout: 8 
   versionFunctions: false 
 
 functions:
