@@ -1,4 +1,4 @@
-## Alexa Flash-Briefing Gateway-Service for Soundcloud Podcasts
+# Alexa Flash-Briefing Gateway-Service for Soundcloud Podcasts
 This gateway-service pulls your Soundcloud-RSS-feed and converts audio-feed-urls to HTTPS in order
 to comply with SSL requirements for audio-feeds for Alexa Flash-Briefing skills. Secondly, the script
 also picks the first configurable X items of your Soundcloud feed and returns it for your Flash-Briefing by
