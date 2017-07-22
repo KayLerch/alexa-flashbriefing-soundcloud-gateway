@@ -18,7 +18,8 @@ _https://feeds.soundcloud.com/users/soundcloud:users:555123456/sounds.rss_
 
 your Soundcloud-UserId is _555123456_. 
 
-After your deployed your serverless stack in step 2) you should use the returned url and provide your Soundcloud-UserId as a GET parameter:
+After your deployed your serverless stack in step 2) you should use the returned url and provide your Soundcloud-UserId as a GET parameter.
+If you don't give it the uid-paramter the endpoints responds with an internal server error.
 
 _https://xxx9t1mxxx.execute-api.eu-west-1.amazonaws.com/prod/feed?uid=555123456_
 
