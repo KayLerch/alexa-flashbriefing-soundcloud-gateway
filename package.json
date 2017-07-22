@@ -1,7 +1,7 @@
 {
   "name": "alexa-flashbriefing-soundcloud-gateway",
   "version": "1.0.0",
-  "description": "",
+  "description": "This gateway-service pulls your Soundcloud-RSS-feed and converts audio-feed-urls to HTTPS in order to comply with SSL requirements for audio-feeds for Alexa Flash-Briefing skills. ",
   "main": "handler.js",
   "dependencies": {
     "https": "^1.0.0"
