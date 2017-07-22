@@ -1,14 +1,14 @@
 'use strict';
 const https = require('https');
-// your soundcloud user-id goes here
-const scuid = '316xxxx62';
+// your feed-url which can be found in your settings in Soundcloud
+const feedUrl = 'https://feeds.soundcloud.com/users/soundcloud:users:xxxxxxxxx/sounds.rss';
 // max number of feed items to return (please note it will at least be one no matter if you set this parameter below 1)
 const items_to_return = 1;
 
 module.exports.feed = (event, context, callback) => {
     var payload = '';
 
-    https.get('https://feeds.soundcloud.com/users/soundcloud:users:' + scuid + '/sounds.rss', function(response) {
+    https.get(feedUrl, function(response) {
         response.on('data', function (chunk) {
             payload += chunk;
         });
